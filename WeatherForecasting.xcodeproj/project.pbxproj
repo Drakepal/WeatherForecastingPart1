@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72CEC43728CFB455006C3A63 /* HourlyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEC43628CFB455006C3A63 /* HourlyWeatherView.swift */; };
 		72E6B47228CA67BF00FA35A8 /* WeatherForecastingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E6B47128CA67BF00FA35A8 /* WeatherForecastingApp.swift */; };
 		72E6B47428CA67BF00FA35A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E6B47328CA67BF00FA35A8 /* ContentView.swift */; };
 		72E6B47628CA67C100FA35A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E6B47528CA67C100FA35A8 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72CEC43628CFB455006C3A63 /* HourlyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherView.swift; sourceTree = "<group>"; };
 		72E6B46E28CA67BF00FA35A8 /* WeatherForecasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E6B47128CA67BF00FA35A8 /* WeatherForecastingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastingApp.swift; sourceTree = "<group>"; };
 		72E6B47328CA67BF00FA35A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				72E6B48228CA694A00FA35A8 /* MenuHeaderView.swift */,
 				72E6B48428CA76D500FA35A8 /* CityNameView.swift */,
 				72E6B48628CA7A6300FA35A8 /* TodayWeatherView.swift */,
+				72CEC43628CFB455006C3A63 /* HourlyWeatherView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				72E6B47428CA67BF00FA35A8 /* ContentView.swift in Sources */,
 				72E6B48728CA7A6300FA35A8 /* TodayWeatherView.swift in Sources */,
+				72CEC43728CFB455006C3A63 /* HourlyWeatherView.swift in Sources */,
 				72E6B47228CA67BF00FA35A8 /* WeatherForecastingApp.swift in Sources */,
 				72E6B48528CA76D500FA35A8 /* CityNameView.swift in Sources */,
 				72E6B48328CA694A00FA35A8 /* MenuHeaderView.swift in Sources */,
