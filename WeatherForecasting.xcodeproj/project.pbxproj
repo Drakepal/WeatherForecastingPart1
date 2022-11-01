@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		72297E7628F89014001B3F9E /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 72297E7528F89014001B3F9E /* Lottie */; };
 		72297E7828F89046001B3F9E /* CityViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72297E7728F89046001B3F9E /* CityViewViewModel.swift */; };
+		72AF8DE629118FA900C30A59 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF8DE529118FA900C30A59 /* API.swift */; };
 		72C2DAD528FDCA3400A68A05 /* nightScatterClouds.json in Resources */ = {isa = PBXBuildFile; fileRef = 72C2DAC528FDCA3200A68A05 /* nightScatterClouds.json */; };
 		72C2DAD628FDCA3400A68A05 /* nightBrokenClouds.json in Resources */ = {isa = PBXBuildFile; fileRef = 72C2DAC628FDCA3200A68A05 /* nightBrokenClouds.json */; };
 		72C2DAD728FDCA3400A68A05 /* dayMist.json in Resources */ = {isa = PBXBuildFile; fileRef = 72C2DAC728FDCA3200A68A05 /* dayMist.json */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		72297E7728F89046001B3F9E /* CityViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewViewModel.swift; sourceTree = "<group>"; };
+		72AF8DE529118FA900C30A59 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		72C2DAC528FDCA3200A68A05 /* nightScatterClouds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nightScatterClouds.json; sourceTree = "<group>"; };
 		72C2DAC628FDCA3200A68A05 /* nightBrokenClouds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nightBrokenClouds.json; sourceTree = "<group>"; };
 		72C2DAC728FDCA3200A68A05 /* dayMist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dayMist.json; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			path = LottieAnimations;
 			sourceTree = "<group>";
 		};
+		72AF8DE429118F8C00C30A59 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				72AF8DE529118FA900C30A59 /* API.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		72E6B46528CA67BF00FA35A8 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		72E6B47028CA67BF00FA35A8 /* WeatherForecasting */ = {
 			isa = PBXGroup;
 			children = (
+				72AF8DE429118F8C00C30A59 /* Networking */,
 				72297E7928F89E55001B3F9E /* LottieAnimations */,
 				72E6B47F28CA68F000FA35A8 /* Model */,
 				72E6B48028CA690300FA35A8 /* View */,
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72AF8DE629118FA900C30A59 /* API.swift in Sources */,
 				72E6B47428CA67BF00FA35A8 /* ContentView.swift in Sources */,
 				72297E7828F89046001B3F9E /* CityViewViewModel.swift in Sources */,
 				72CEC43928CFBFC3006C3A63 /* DailyWeatherView.swift in Sources */,
@@ -406,6 +418,7 @@
 				DEVELOPMENT_TEAM = FB5TQ72K3A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location for weather data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -435,6 +448,7 @@
 				DEVELOPMENT_TEAM = FB5TQ72K3A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location for weather data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
