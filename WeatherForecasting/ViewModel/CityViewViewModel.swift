@@ -79,7 +79,7 @@ final class CityViewViewModel: ObservableObject {
     }
     
     func getTempFor(temp: Double) -> String {
-        return String(format: "0.1f", temp)
+        return String(format: "%0.1f", temp)
     }
     
     func getDayFor(timestamp: Int) -> String {
@@ -107,7 +107,7 @@ final class CityViewViewModel: ObservableObject {
     
     private func getWeatherInternal(city: String, for urlString: String) {
         // Return to if there are errors.
-        NetworkManager<WeatherResponse>().fetch(for: URL(string: urlString)!) { (result) in
+        NetworkManager<WeatherResponse>.fetch(for: URL(string: urlString)!) { (result) in
             switch result {
             case .success(let response) :
                 DispatchQueue.main.async {

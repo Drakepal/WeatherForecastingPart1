@@ -8,27 +8,37 @@
 import SwiftUI
 
 struct TodayWeatherView: View {
+    
+    @ObservedObject var cityVM: CityViewViewModel
+    
     var body: some View {
         VStack(spacing: 10) {
             Text("Today")
+                .foregroundColor(.black)
                 .font(.largeTitle)
                 .bold()
             HStack(spacing: 20) {
-                Color(.gray)
+                LottieView(name: cityVM.getLottieAnimation(icon: cityVM.weatherIcon))
                     .frame(width: 100, height: 100)
                 VStack(alignment: .leading) {
-                    Text("Temperature °F")
+                    Text("\(cityVM.temperature) °F")
+                        .foregroundColor(.black)
                         .font(.system(size: 40))
-                    Text("Conditions")
+                    Text(cityVM.conditions)
+                        .foregroundColor(.black)
                 }
             }
             HStack {
                 Spacer()
                 widgetView(image: "wind", color: .green, title: "Wind MPH")
+                    
+                    .foregroundColor(.black)
                 Spacer()
                 widgetView(image: "drop.fill", color: .blue, title: "Humidity")
+                    .foregroundColor(.black)
                 Spacer()
                 widgetView(image: "umbrella.fill", color: .red, title: "Rain Chances")
+                    .foregroundColor(.black)
                 Spacer()
             }
         
@@ -59,6 +69,6 @@ private func widgetView(image: String, color: Color, title: String) -> some View
 
 struct TodayWeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        TodayWeatherView()
+        ContentView()
     }
 }

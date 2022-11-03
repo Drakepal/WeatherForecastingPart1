@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DailyWeatherView: View {
+    
+    @ObservedObject var cityVM: CityViewViewModel
+    
     var body: some View {
         LazyVStack {
             dailyCell()
@@ -24,9 +27,9 @@ struct DailyWeatherView: View {
             Image(systemName: "sun.max.fill")
             
         }
-        .foregroundColor(.white)
+        .foregroundColor(.black)
         .padding()
-        .background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color("Color1"), Color("Color2")]), startPoint: .topLeading, endPoint: .bottomTrailing)))
+        .background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color(.yellow).opacity(0.5), Color(.systemPink).opacity(0.5)]), startPoint: .topLeading, endPoint: .bottomTrailing)))
         .shadow(color: Color.white.opacity(0.1), radius: 2, x: -2, y: -2)
         .shadow(color: Color.black.opacity(0.2), radius: 2, x: 2, y: 2)
     
@@ -39,6 +42,6 @@ struct DailyWeatherView: View {
 
 struct DailyWeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        DailyWeatherView()
+        ContentView()
     }
 }

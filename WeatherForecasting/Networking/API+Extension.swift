@@ -9,7 +9,7 @@ import Foundation
 
 
 extension API {
-    static let baseURLString = "https://api.openweathermap.org/data/3.0/"
+    static let baseURLString = "https://api.openweathermap.org/data/2.5/"
     
     static func getURLFor(lat: Double, lon: Double) -> String {
 //        Check if weather data is not working.

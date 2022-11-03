@@ -27,6 +27,6 @@ struct CityNameView: View {
 
 struct CityNameView_Previews: PreviewProvider {
     static var previews: some View {
-        CityNameView(city: "Tulsa", date: "September 8, 2022")
+        ContentView()
     }
 }
