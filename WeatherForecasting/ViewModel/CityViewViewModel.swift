@@ -128,10 +128,12 @@ final class CityViewViewModel: ObservableObject {
             return "nightClearSky"
         case "02n":
             return "nightFewClouds"
-        case "04d":
+        case "03d":
             return "dayScatterClouds"
-        case"03d":
+        case"03n":
             return "nightScatterClouds"
+        case"04d":
+            return "dayBrokenClouds"
         case"04n":
             return "nightBrokenClouds"
         case "09d":
