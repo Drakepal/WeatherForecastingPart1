@@ -12,19 +12,21 @@ struct DailyWeatherView: View {
     @ObservedObject var cityVM: CityViewViewModel
     
     var body: some View {
-        LazyVStack {
-            dailyCell()
+        ForEach(cityVM.weather.daily) { weather in
+            LazyVStack {
+                dailyCell(weather: weather)
+            }
         }
     }
-    private func dailyCell() -> some View {
+    private func dailyCell(weather: DailyWeather) -> some View {
         HStack {
-            Text("Day".uppercased())
+            Text(cityVM.getDayFor(timestamp: weather.dt).uppercased())
                 .frame(width: 50)
             Spacer()
-            Text("Temperature °F")
+            Text("\(cityVM.getTempFor(temp: weather.temp.max)) | \(cityVM.getTempFor(temp: weather.temp.min)) °F")
                 .frame(width: 150)
             Spacer()
-            Image(systemName: "sun.max.fill")
+            cityVM.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.max.fill")
             
         }
         .foregroundColor(.black)

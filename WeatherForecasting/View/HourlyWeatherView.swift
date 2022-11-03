@@ -13,26 +13,12 @@ struct HourlyWeatherView: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 80) {
-                VStack(spacing: 20) {
-                    Image(systemName: "sun.max.fill")
-                    Text("Hour")
-                    Text("Temp")
-                }
-                VStack(spacing: 20) {
-                    Image(systemName: "sun.max.fill")
-                    Text("Hour")
-                    Text("Temp")
-                }
-                VStack(spacing: 20) {
-                    Image(systemName: "sun.max.fill")
-                    Text("Hour")
-                    Text("Temp")
-                }
-                VStack(spacing: 20) {
-                    Image(systemName: "sun.max.fill")
-                    Text("Hour")
-                    Text("Temp")
+            HStack(spacing: 20) {
+                ForEach(cityVM.weather.hourly) { weather in
+                    let icon = cityVM.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.max.full")
+                    let hour = cityVM.getTimeFor(timestamp: weather.dt)
+                    let temp = cityVM.getTempFor(temp: weather.temp)
+                    getHourlyView(hour: hour, image: icon, temp: temp)
                 }
             }
         }
@@ -41,10 +27,10 @@ struct HourlyWeatherView: View {
         VStack(spacing: 20) {
             Text(hour)
             image
-                .foregroundColor(.yellow)
+                .foregroundColor(.black)
             Text(temp)
         }
-        .foregroundColor(.white)
+        .foregroundColor(.black)
         .padding()
         .background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color(.systemPink).opacity(0.5), Color(.yellow).opacity(0.5)]), startPoint: .topLeading, endPoint: .bottomTrailing)))
         .shadow(color: Color.white.opacity(0.1), radius: 2, x: -2, y: -2)

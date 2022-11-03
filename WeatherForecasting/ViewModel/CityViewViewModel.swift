@@ -172,7 +172,7 @@ final class CityViewViewModel: ObservableObject {
         case "02d":
             return Image(systemName: "cloud.sun.fill")
         case "02n":
-            return Image(systemName: "clous.moon.fill")
+            return Image(systemName: "cloud.moon.fill")
         case "03d":
             return Image(systemName: "cloud.fill")
         case "03n":
