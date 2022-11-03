@@ -30,7 +30,7 @@ struct TodayWeatherView: View {
             }
             HStack {
                 Spacer()
-                widgetView(image: "wind", color: .green, title: "Wind MPH")
+                widgetView(image: "wind", color: .gray, title: "Wind MPH")
                     
                     .foregroundColor(.black)
                 Spacer()
@@ -60,7 +60,7 @@ private func widgetView(image: String, color: Color, title: String) -> some View
             .font(.title)
             .foregroundColor(color)
             .background(
-                RoundedRectangle(cornerRadius: 10).fill(Color.white))
+                RoundedRectangle(cornerRadius: 10).fill(Color.yellow.opacity(0.3)))
         
         Text(title) 
     }
