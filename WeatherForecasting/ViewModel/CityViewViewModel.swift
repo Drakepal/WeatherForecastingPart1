@@ -100,7 +100,7 @@ final class CityViewViewModel: ObservableObject {
             let urlString = API.getURLFor(lat: coord.latitude, lon: coord.longitude)
             getWeatherInternal(city: city, for: urlString)
         } else {
-            let urlString = API.getURLFor(lat: 36.153980, lon: -95.992775)
+            let urlString = API.getURLFor(lat: 36.1022685, lon: -96.0334080)
             getWeatherInternal(city: city, for: urlString)
         }
     }
@@ -128,9 +128,9 @@ final class CityViewViewModel: ObservableObject {
             return "nightClearSky"
         case "02n":
             return "nightFewClouds"
-        case "03d":
+        case "04d":
             return "dayScatterClouds"
-        case"04d":
+        case"03d":
             return "nightScatterClouds"
         case"04n":
             return "nightBrokenClouds"
